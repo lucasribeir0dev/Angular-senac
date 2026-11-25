@@ -1,0 +1,46 @@
+<h2>Lista De Personagens </h2>
+<br><br>
+
+<h3>Destaque : {{ heroiDestaque}}</h3>
+<p>Universo : {{ universo}}</p>
+
+
+<button [disabled]="estaDesabilitado" [title]="dicaTooltip">Ação Do Herói</button>
+
+<br><br>
+<button (click)="alternarStatus()">Alternar Status</button>
+<br><br>
+<span>Status atual: {{ativo ? "Ativo" : "Inativo"}}</span>
+<br><br>
+
+<input type="text" [(ngModel)]="heroiDestaque">
+<p>Você está editando: {{heroiDestaque}}</p>
+
+<ul>
+    <!-- O Angular cria uma tag <li> para cada item da lista -->
+    <li *ngFor="let heroi of equipe">
+        {{ heroi }}
+        <!-- Se heroi.ativo for true, mostra Ativo; se false, mostra Inativo -->
+        <span *ngIf="heroi.ativo" style="color: green;">🟢 Ativo</span>
+        <span *ngIf="!heroi.ativo" style="color: red;">🔴 Inativo</span>
+    </li>
+</ul>
+
+<mat-card>
+    <!-- 1. Cabeçalho com avatar, título e subtítulo -->
+    <mat-card-header>
+        <mat-icon mat-card-avatar color="primary">shield</mat-icon>
+        <mat-card-title>Homem de Ferro</mat-card-title>
+        <mat-card-subtitle>Marvel</mat-card-subtitle>
+    </mat-card-header>
+
+    <!-- 2. Corpo de texto e conteúdo principal -->
+    <mat-card-content>
+        <p>Armadura de alta tecnologia</p>
+    </mat-card-content>
+
+    <!-- 3. Barra de ações e botões interativos -->
+    <mat-card-actions align="end">
+        <button mat-raised-button color="primary">Detalhes</button>
+    </mat-card-actions>
+</mat-card>
