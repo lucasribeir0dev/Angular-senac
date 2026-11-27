@@ -20,9 +20,7 @@
     <!-- O Angular cria uma tag <li> para cada item da lista -->
     <li *ngFor="let heroi of equipe">
         {{ heroi }}
-        <!-- Se heroi.ativo for true, mostra Ativo; se false, mostra Inativo -->
-        <span *ngIf="heroi.ativo" style="color: green;">🟢 Ativo</span>
-        <span *ngIf="!heroi.ativo" style="color: red;">🔴 Inativo</span>
+      
     </li>
 </ul>
 

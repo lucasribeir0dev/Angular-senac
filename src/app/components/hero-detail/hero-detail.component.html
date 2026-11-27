@@ -1,0 +1,25 @@
+<mat-card style="max-width: 600px; margin: 30px auto; padding: 16px;">
+    <mat-card-header>
+      <mat-icon mat-card-avatar color="primary">assignment_ind</mat-icon>
+      <mat-card-title>Ficha Confidencial do Herói</mat-card-title>
+      <mat-card-subtitle>Registro Cadastral #{{ heroiId }}</mat-card-subtitle>
+    </mat-card-header>
+  
+    <mat-card-content style="margin-top: 16px; font-size: 15px; line-height: 1.6;">
+      <p>Você está consultando a rota complementar correspondente ao identificador único <strong>#{{ heroiId }}</strong>.</p>
+      
+      <div style="margin-top: 12px; padding: 12px; background-color: #e8eaf6; border-left: 4px solid #3f51b5; border-radius: 4px;">
+        💡 <em>Na Aula 07, este componente utilizará este mesmo <code>heroiId</code> para buscar os dados em tempo real da API NestJS via HTTP GET (<code>http://localhost:3000/heroes/{{ heroiId }}</code>)!</em>
+      </div>
+    </mat-card-content>
+  
+    <mat-card-actions align="end" style="margin-top: 16px;">
+      <!-- Botão de voltar que dispara o método voltar() do TypeScript -->
+      <button mat-raised-button color="primary" (click)="voltar()">
+        <mat-icon>arrow_back</mat-icon> Voltar para a Lista
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+  
+  

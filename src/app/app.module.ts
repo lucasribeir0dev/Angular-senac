@@ -9,10 +9,16 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { AboutComponent } from './components/about/about.component';
+import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeroListComponent
+    HeroListComponent,
+    AboutComponent,
+    HeroDetailComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
